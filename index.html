@@ -68,6 +68,26 @@
       border-top: 1px solid #e5e5e5;
       margin: 40px 0;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 12px 0 8px;
+    }
+    th {
+      text-align: left;
+      padding: 8px 10px;
+      background: #f0f0f0;
+      font-weight: 700;
+      color: #111;
+      border: 1px solid #e0e0e0;
+    }
+    td {
+      padding: 8px 10px;
+      border: 1px solid #e0e0e0;
+      color: #444;
+      vertical-align: top;
+    }
     footer {
       text-align: center;
       font-size: 13px;
@@ -86,7 +106,7 @@
 
   <div class="container">
     <h2>Privacy Policy</h2>
-    <p class="updated">Last updated: April 28, 2026</p>
+    <p class="updated">Last updated: May 1, 2026</p>
 
     <p>Milano Site Check ("the App") is operated by Milano Doors &amp; Mouldings. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
 
@@ -95,16 +115,66 @@
     <h3>1. Information We Collect</h3>
     <p>When you create an account or use the App, we may collect:</p>
     <ul>
-      <li><strong>Account information</strong> — your name and email address when you sign up</li>
+      <li><strong>Account information</strong> — your name, email address, and phone number when you sign up</li>
       <li><strong>Inspection data</strong> — customer names, site addresses, door measurements, and material quantities you enter during inspections</li>
       <li><strong>Authentication data</strong> — if you sign in with Apple or Google, we receive your name and email from those providers</li>
+      <li><strong>Device identifiers</strong> — a device-level identifier (such as the Android ID on Android devices) used by our authentication provider to maintain secure sessions and prevent unauthorised access. This identifier is not used for advertising or analytics.</li>
+      <li><strong>App interactions</strong> — basic usage information (such as when you open the app or complete an inspection) used to maintain app functionality and sync data across your devices</li>
     </ul>
-    <p>We do <strong>not</strong> collect payment information, precise GPS location, or device contacts.</p>
+    <p>We do <strong>not</strong> collect payment information, precise GPS location, device contacts, or advertising identifiers.</p>
 
-    <h3>2. Microphone Access</h3>
+    <h3>2. Data Safety Summary</h3>
+    <p>The following table summarises the data types collected and how they are used, consistent with our Google Play Data Safety and Apple App Privacy declarations:</p>
+    <table>
+      <tr>
+        <th>Data type</th>
+        <th>Collected</th>
+        <th>Shared with third party</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Yes</td>
+        <td>Supabase (storage)</td>
+        <td>Account management</td>
+      </tr>
+      <tr>
+        <td>Email address</td>
+        <td>Yes</td>
+        <td>Supabase, Resend (email delivery)</td>
+        <td>Account management, inspection reports</td>
+      </tr>
+      <tr>
+        <td>Phone number</td>
+        <td>Yes (optional)</td>
+        <td>Supabase (storage)</td>
+        <td>Account management</td>
+      </tr>
+      <tr>
+        <td>Device or other IDs</td>
+        <td>Yes</td>
+        <td>Supabase (authentication)</td>
+        <td>App functionality — secure session management</td>
+      </tr>
+      <tr>
+        <td>App interactions</td>
+        <td>Yes</td>
+        <td>Supabase (storage)</td>
+        <td>App functionality — data sync</td>
+      </tr>
+      <tr>
+        <td>Inspection data (customer names, addresses, door specs)</td>
+        <td>Yes</td>
+        <td>Supabase (storage), Resend (email delivery)</td>
+        <td>Core app functionality</td>
+      </tr>
+    </table>
+    <p>All data is encrypted in transit using TLS. Users can request full account and data deletion at any time (see Section 9).</p>
+
+    <h3>3. Microphone Access</h3>
     <p>The App requests access to your device microphone solely to enable voice input for notes and comments within the inspection form. Audio is processed on-device by your operating system's speech recognition service and is never recorded or stored by Milano Doors &amp; Mouldings.</p>
 
-    <h3>3. How We Use Your Information</h3>
+    <h3>4. How We Use Your Information</h3>
     <ul>
       <li>To authenticate you and maintain your account</li>
       <li>To store and sync your inspection drafts across your devices</li>
@@ -113,45 +183,47 @@
     </ul>
     <p>We do not sell your data to third parties and do not use your data for advertising.</p>
 
-    <h3>4. Data Storage &amp; Security</h3>
+    <h3>5. Data Storage &amp; Security</h3>
     <p>Your account and inspection data is stored securely using <strong>Supabase</strong> (supabase.com), a cloud database provider. Data is encrypted in transit using TLS and at rest. Inspection reports are emailed via <strong>Resend</strong> (resend.com).</p>
     <p>Lock codes entered in the App are stored on your device only and are never uploaded to our servers.</p>
 
-    <h3>5. Third-Party Services</h3>
+    <h3>6. Third-Party Services</h3>
     <p>The App uses the following third-party services, each governed by their own privacy policies:</p>
     <ul>
-      <li><a href="https://supabase.com/privacy" target="_blank">Supabase</a> — authentication and data storage</li>
+      <li><a href="https://supabase.com/privacy" target="_blank">Supabase</a> — authentication, session management, and data storage</li>
       <li><a href="https://resend.com/privacy" target="_blank">Resend</a> — email delivery</li>
       <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a> — Sign in with Apple</li>
       <li><a href="https://policies.google.com/privacy" target="_blank">Google</a> — Sign in with Google</li>
     </ul>
 
-    <h3>6. Data Retention</h3>
-    <p>Your account and inspection data is retained for as long as your account is active. Submitted inspections are retained for record-keeping purposes. You may request deletion of your account and associated data at any time by contacting us.</p>
+    <h3>7. Data Retention</h3>
+    <p>Your account and inspection data is retained for as long as your account is active. Submitted inspections are retained for record-keeping purposes. You may request deletion of your account and associated data at any time by contacting us or using the in-app account deletion feature.</p>
 
-    <h3>7. Guest Mode</h3>
-    <p>You may use the App as a guest without creating an account. In guest mode, all data is stored locally on your device only and is not synced to our servers. Guest sessions expire after 7 days of inactivity.</p>
+    <h3>8. Guest Mode</h3>
+    <p>You may use the App as a guest without creating an account. In guest mode, all data is stored locally on your device only and is not synced to our servers. No account information, device identifiers, or app interactions are collected in guest mode. Guest sessions expire after 7 days of inactivity.</p>
 
-    <h3>8. Your Rights</h3>
+    <h3>9. Your Rights &amp; Account Deletion</h3>
     <p>You have the right to:</p>
     <ul>
       <li>Access the personal data we hold about you</li>
       <li>Request correction of inaccurate data</li>
-      <li>Request deletion of your account and data</li>
+      <li>Request deletion of your account and all associated data</li>
       <li>Withdraw consent at any time by deleting the App</li>
     </ul>
+    <p>To delete your account and all associated data, use the <strong>Settings → Danger Zone → Delete Account</strong> option within the App, or contact us at <a href="mailto:info@milanodoors.ca">info@milanodoors.ca</a>. Account deletion permanently removes your profile and all inspection data from our servers.</p>
 
-    <h3>9. Children's Privacy</h3>
+    <h3>10. Children's Privacy</h3>
     <p>The App is intended for use by adults (18+) in a professional capacity. We do not knowingly collect data from children under 13.</p>
 
-    <h3>10. Changes to This Policy</h3>
+    <h3>11. Changes to This Policy</h3>
     <p>We may update this policy from time to time. We will notify users of significant changes via the App. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
-    <h3>11. Contact Us</h3>
+    <h3>12. Contact Us</h3>
     <p>For any privacy-related questions or data requests, contact us at:</p>
     <ul>
       <li><strong>Company:</strong> Milano Doors &amp; Mouldings</li>
       <li><strong>Email:</strong> <a href="mailto:info@milanodoors.ca">info@milanodoors.ca</a></li>
+      <li><strong>Privacy Policy URL:</strong> <a href="https://bedlamiteartist.github.io/milano-privacy/">https://bedlamiteartist.github.io/milano-privacy/</a></li>
     </ul>
   </div>
 
